@@ -6,16 +6,8 @@ const Editor = ({ defaultColor, defaultSize, shape: Shape }) => {
 
   return (
     <div>
-      <Shape color={color} size={size} />
       <div>
-        <label htmlFor="colorPicker">Color Picker:</label>
-        <input
-          type="color"
-          id="colorPicker"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        ></input>
-        <label htmlFor="sizePicker">Size Picker:</label>
+        <label htmlFor="sizePicker">{`${Shape.name}`} Size:</label>
         <input
           type="number"
           id="sizePicker"
@@ -23,6 +15,14 @@ const Editor = ({ defaultColor, defaultSize, shape: Shape }) => {
           value={size}
           onChange={(e) => setSize(e.target.value)}
         ></input>
+        <label htmlFor="colorPicker">{`${Shape.name}`} Color:</label>
+        <input
+          type="color"
+          id="colorPicker"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+        ></input>
+        <Shape color={color} size={size} />
       </div>
     </div>
   );

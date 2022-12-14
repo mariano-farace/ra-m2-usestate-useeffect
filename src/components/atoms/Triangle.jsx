@@ -1,15 +1,14 @@
 import React from "react";
 
-const Triangle = () => {
+const Triangle = ({ color, size }) => {
   return (
     <div
       style={{
-        // backgroundColor: "blue",
         height: 0,
         width: 0,
-        borderLeft: "25px solid transparent",
-        borderRight: "25px solid transparent",
-        borderBottom: "50px solid #555",
+        borderLeft: `${size / 2}px solid transparent`,
+        borderRight: `${size / 2}px solid transparent`,
+        borderBottom: `${size}px solid ${color}`,
       }}
     ></div>
   );

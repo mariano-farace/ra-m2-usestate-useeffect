@@ -1,13 +1,13 @@
 import React from "react";
 
-const Circle = () => {
+const Circle = ({ color, size }) => {
   return (
     <div
       style={{
-        backgroundColor: "blue",
-        height: 50,
-        width: 50,
-        borderRadius: 50,
+        backgroundColor: color,
+        height: `${size}px`,
+        width: `${size}px`,
+        borderRadius: "50%",
       }}
     ></div>
   );

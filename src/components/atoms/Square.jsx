@@ -1,9 +1,14 @@
 import React from "react";
 
 const Square = ({ color, size }) => {
-  console.log("size: ", size);
   return (
-    <div style={{ backgroundColor: color, height: size, width: size }}></div>
+    <div
+      style={{
+        backgroundColor: color,
+        height: `${size}px`,
+        width: `${size}px`,
+      }}
+    ></div>
   );
 };
 
