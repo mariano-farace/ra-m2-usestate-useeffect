@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-const Editor = ({ defaultColor, defaultSize, shape: Shape }) => {
+const Editor = ({ defaultColor, shape: Shape, size, setSize }) => {
   const [color, setColor] = useState(defaultColor);
-  const [size, setSize] = useState(defaultSize);
 
   return (
     <div>
@@ -15,6 +14,8 @@ const Editor = ({ defaultColor, defaultSize, shape: Shape }) => {
           value={size}
           onChange={(e) => setSize(e.target.value)}
         ></input>
+      </div>
+      <div>
         <label htmlFor="colorPicker">{`${Shape.name}`} Color:</label>
         <input
           type="color"
