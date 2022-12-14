@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const Editor = ({ defaultColor, shape: Shape, size, setSize }) => {
-  const [color, setColor] = useState(defaultColor);
-
+const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
   return (
     <div>
       <div>

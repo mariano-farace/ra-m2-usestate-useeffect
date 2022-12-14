@@ -8,31 +8,44 @@ function App() {
   const [circleSize, setCircleSize] = useState(52);
   const [squareSize, setSquareSize] = useState(53);
 
+  const [triangleColor, setTriangleColor] = useState("#0000FF");
+  const [circleColor, setCircleColor] = useState("#EEDE2B");
+  const [squareColor, setSquareColor] = useState("#FF0000");
+
   useEffect(() => {
     if (triangleSize === circleSize && triangleSize === squareSize) {
       alert("All the shapes have the same size");
     }
   }, [triangleSize, circleSize, squareSize]);
 
+  useEffect(() => {
+    if (triangleColor === circleColor && triangleColor === squareColor) {
+      alert("All the shapes have the same color");
+    }
+  }, [triangleColor, circleColor, squareColor]);
+
   return (
     <div className="App">
       <Editor
+        color={triangleColor}
+        setColor={setTriangleColor}
         shape={Triangle}
-        defaultColor={"#0000FF"}
         size={triangleSize}
         setSize={setTriangleSize}
       />
 
       <Editor
+        color={circleColor}
+        setColor={setCircleColor}
         shape={Circle}
-        defaultColor={"#EEDE2B"}
         size={circleSize}
         setSize={setCircleSize}
       />
 
       <Editor
+        color={squareColor}
+        setColor={setSquareColor}
         shape={Square}
-        defaultColor={"#FF0000"}
         size={squareSize}
         setSize={setSquareSize}
       />
