@@ -1,5 +1,5 @@
 import Square from "./components/atoms/Square";
-import Editor from "./components/molecules/Editor";
+import Editor from "./components/molecules/ShapeEditor";
 import Triangle from "./components/atoms/Triangle";
 import Circle from "./components/atoms/Circle";
 import { useEffect, useState } from "react";
