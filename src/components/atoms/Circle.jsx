@@ -2,14 +2,15 @@ import React from "react";
 
 const Circle = ({ color, size }) => {
   return (
-    <div
+    <svg
       style={{
+        display: "block",
         backgroundColor: color,
         height: `${size}px`,
         width: `${size}px`,
         borderRadius: "50%",
       }}
-    ></div>
+    ></svg>
   );
 };
 
