@@ -1,28 +1,28 @@
-import ShapeLabel from "../atoms/ShapeLabel";
+import PickerLabel from "../atoms/PickerLabel";
+import InputNumber from "../atoms/InputNumber";
+import InputColor from "../atoms/InputColor";
 
 const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
+  const onChangeSize = (e) => setSize(e.target.value);
+  const onChangeColor = (e) => setColor(e.target.value);
+
   return (
     <div>
       <div>
-        <ShapeLabel shapeName={Shape.name} />
-        <input
-          name="sizePicker"
-          type="number"
-          id={`sizePicker-${Shape.name}`}
-          min="0"
-          value={size}
-          onChange={(e) => setSize(e.target.value)}
-        ></input>
+        <PickerLabel shapeName={Shape.name} type="Size" />
+        <InputNumber
+          shapeName={Shape.name}
+          onChange={onChangeSize}
+          size={size}
+        />
       </div>
       <div>
-        <label htmlFor="colorPicker">{`${Shape.name}`} Color: </label>
-        <input
-          name="colorPicker"
-          type="color"
-          id={`colorPicker-${Shape.name}`}
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        ></input>
+        <PickerLabel shapeName={Shape.name} type="Color" />
+        <InputColor
+          shapeName={Shape.name}
+          onChange={onChangeColor}
+          color={color}
+        />
         <Shape color={color} size={size} />
       </div>
     </div>
