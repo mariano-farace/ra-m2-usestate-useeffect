@@ -4,6 +4,7 @@ import Triangle from "./components/atoms/Triangle";
 import Circle from "./components/atoms/Circle";
 import { useEffect, useState } from "react";
 function App() {
+  // En la primera pasada al cambiar 51 a 52, y 53 a 52 (el primero y el tercero), no salta la alerta. Revisa porque
   const [triangleSize, setTriangleSize] = useState(51);
   const [circleSize, setCircleSize] = useState(52);
   const [squareSize, setSquareSize] = useState(53);
