@@ -1,8 +1,10 @@
+import ShapeLabel from "../atoms/ShapeLabel";
+
 const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
   return (
     <div>
       <div>
-        <label htmlFor="sizePicker">{`${Shape.name}`} Size:</label>
+        <ShapeLabel shapeName={Shape.name} />
         <input
           name="sizePicker"
           type="number"
@@ -13,7 +15,7 @@ const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
         ></input>
       </div>
       <div>
-        <label htmlFor="colorPicker">{`${Shape.name}`} Color:</label>
+        <label htmlFor="colorPicker">{`${Shape.name}`} Color: </label>
         <input
           name="colorPicker"
           type="color"
