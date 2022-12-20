@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Square = ({ color, size }) => {
   return (
@@ -11,6 +12,11 @@ const Square = ({ color, size }) => {
       }}
     ></svg>
   );
+};
+
+Square.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Square;

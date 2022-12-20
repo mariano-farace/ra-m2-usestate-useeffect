@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Triangle = ({ color, size }) => {
   return (
@@ -13,6 +14,11 @@ const Triangle = ({ color, size }) => {
       }}
     ></svg>
   );
+};
+
+Triangle.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Triangle;
