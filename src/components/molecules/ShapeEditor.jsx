@@ -34,6 +34,8 @@ Editor.propTypes = {
   setColor: PropTypes.func.isRequired,
   setSize: PropTypes.func.isRequired,
   shape: PropTypes.elementType.isRequired,
+  color: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default Editor;
