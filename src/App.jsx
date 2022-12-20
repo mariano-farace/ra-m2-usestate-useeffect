@@ -4,9 +4,9 @@ import Triangle from "./components/atoms/Triangle";
 import Circle from "./components/atoms/Circle";
 import { useEffect, useState } from "react";
 function App() {
-  const [triangleSize, setTriangleSize] = useState(51);
-  const [circleSize, setCircleSize] = useState(52);
-  const [squareSize, setSquareSize] = useState(53);
+  const [triangleSize, setTriangleSize] = useState("51");
+  const [circleSize, setCircleSize] = useState("52");
+  const [squareSize, setSquareSize] = useState("53");
 
   const [triangleColor, setTriangleColor] = useState("#0000FF");
   const [circleColor, setCircleColor] = useState("#EEDE2B");
