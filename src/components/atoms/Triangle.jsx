@@ -17,8 +17,8 @@ const Triangle = ({ color, size }) => {
 };
 
 Triangle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.string,
+  color: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default Triangle;

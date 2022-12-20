@@ -15,9 +15,9 @@ function InputNumber({ shapeName, onChange, size }) {
 }
 
 InputNumber.propTypes = {
-  shapeName: PropTypes.string,
-  onChange: PropTypes.func,
-  size: PropTypes.string,
+  shapeName: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default InputNumber;

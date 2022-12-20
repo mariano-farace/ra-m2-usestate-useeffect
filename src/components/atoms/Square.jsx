@@ -15,8 +15,8 @@ const Square = ({ color, size }) => {
 };
 
 Square.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.string,
+  color: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default Square;

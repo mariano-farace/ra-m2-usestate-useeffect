@@ -10,8 +10,8 @@ function PickerLabel({ shapeName, type }) {
 }
 
 PickerLabel.propTypes = {
-  shapeName: PropTypes.string,
-  type: PropTypes.oneOf(["Size", "Color"]),
+  shapeName: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(["Size", "Color"]).isRequired,
 };
 
 export default PickerLabel;

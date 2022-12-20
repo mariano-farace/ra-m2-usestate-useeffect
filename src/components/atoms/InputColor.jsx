@@ -14,9 +14,9 @@ function InputColor({ shapeName, onChange, color }) {
 }
 
 InputColor.propTypes = {
-  shapeName: PropTypes.string,
-  onChange: PropTypes.func,
-  color: PropTypes.string,
+  shapeName: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default InputColor;
