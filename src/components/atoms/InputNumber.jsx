@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function InputNumber({ shapeName, onChange, size }) {
   return (
@@ -12,5 +13,11 @@ function InputNumber({ shapeName, onChange, size }) {
     ></input>
   );
 }
+
+InputNumber.propTypes = {
+  shapeName: PropTypes.string,
+  onChange: PropTypes.func,
+  size: PropTypes.string,
+};
 
 export default InputNumber;

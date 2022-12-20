@@ -1,6 +1,7 @@
 import PickerLabel from "../atoms/PickerLabel";
 import InputNumber from "../atoms/InputNumber";
 import InputColor from "../atoms/InputColor";
+import PropTypes from "prop-types";
 
 const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
   const onChangeSize = (e) => setSize(e.target.value);
@@ -27,6 +28,12 @@ const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
       </div>
     </div>
   );
+};
+
+Editor.propTypes = {
+  setColor: PropTypes.func.isRequired,
+  setSize: PropTypes.func.isRequired,
+  shape: PropTypes.elementType.isRequired,
 };
 
 export default Editor;
