@@ -8,7 +8,7 @@ const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
         <input
           name="sizePicker"
           type="number"
-          id="sizePicker"
+          id={`sizePicker-${Shape.name}`}
           min="0"
           value={size}
           onChange={(e) => setSize(e.target.value)}
@@ -19,7 +19,7 @@ const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
         <input
           name="colorPicker"
           type="color"
-          id="colorPicker"
+          id={`colorPicker-${Shape.name}`}
           value={color}
           onChange={(e) => setColor(e.target.value)}
         ></input>
