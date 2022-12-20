@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-
 const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
   return (
     <div>
       <div>
         <label htmlFor="sizePicker">{`${Shape.name}`} Size:</label>
         <input
+          name="sizePicker"
           type="number"
           id="sizePicker"
           min="0"
@@ -16,6 +15,7 @@ const Editor = ({ color, setColor, shape: Shape, size, setSize }) => {
       <div>
         <label htmlFor="colorPicker">{`${Shape.name}`} Color:</label>
         <input
+          name="colorPicker"
           type="color"
           id="colorPicker"
           value={color}
