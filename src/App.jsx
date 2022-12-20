@@ -1,7 +1,5 @@
-import Square from "./components/atoms/Square";
-import Editor from "./components/molecules/ShapeEditor";
-import Triangle from "./components/atoms/Triangle";
-import Circle from "./components/atoms/Circle";
+import { ShapeEditor } from "./components/molecules";
+import { Circle, Square, Triangle } from "./components/atoms";
 import { useEffect, useState } from "react";
 function App() {
   const [triangleSize, setTriangleSize] = useState("51");
@@ -26,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <Editor
+      <ShapeEditor
         color={triangleColor}
         setColor={setTriangleColor}
         shape={Triangle}
@@ -34,7 +32,7 @@ function App() {
         setSize={setTriangleSize}
       />
 
-      <Editor
+      <ShapeEditor
         color={circleColor}
         setColor={setCircleColor}
         shape={Circle}
@@ -42,7 +40,7 @@ function App() {
         setSize={setCircleSize}
       />
 
-      <Editor
+      <ShapeEditor
         color={squareColor}
         setColor={setSquareColor}
         shape={Square}
