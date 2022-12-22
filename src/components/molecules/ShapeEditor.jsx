@@ -6,7 +6,12 @@ const ShapeEditor = ({ color, setColor, shape: Shape, size, setSize }) => {
   const onChangeColor = (e) => setColor(e.target.value);
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <div>
         <PickerLabel shapeName={Shape.name} type="Size" />
         <InputNumber
@@ -22,6 +27,8 @@ const ShapeEditor = ({ color, setColor, shape: Shape, size, setSize }) => {
           onChange={onChangeColor}
           color={color}
         />
+      </div>
+      <div>
         <Shape color={color} size={size} />
       </div>
     </div>
