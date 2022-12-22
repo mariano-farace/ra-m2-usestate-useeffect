@@ -2,14 +2,9 @@ import PropTypes from "prop-types";
 
 const Square = ({ color, size }) => {
   return (
-    <svg
-      style={{
-        display: "block",
-        backgroundColor: color,
-        height: `${size}px`,
-        width: `${size}px`,
-      }}
-    ></svg>
+    <svg height={size} width={size}>
+      <rect width={size} height={size} color={color} style={{ fill: color }} />
+    </svg>
   );
 };
 
